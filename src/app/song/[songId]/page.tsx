@@ -9,9 +9,10 @@ export default function SongPage() {
     const songId = params.songId as string;
     
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center p-4">
-            
-            <SongContainer songId={songId} />
+        <main className="flex min-h-screen flex-col items-center justify-center p-4 sm:p-6 md:p-8">
+            <div className="w-full max-w-3xl">
+                <SongContainer songId={songId} />
+            </div>
         </main>
     );
 }
