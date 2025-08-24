@@ -1,0 +1,104 @@
+{
+  "colors": {
+    "primary": {
+      "black": "#000000",
+      "white": "#FFFFFF",
+      "accent": "#FF0040"
+    },
+    "neutral": {
+      "900": "#000000",
+      "800": "#1a1a1a",
+      "700": "#2d2d2d",
+      "600": "#404040",
+      "500": "#666666",
+      "400": "#999999",
+      "300": "#cccccc",
+      "200": "#e6e6e6",
+      "100": "#f5f5f5",
+      "50": "#ffffff"
+    },
+    "surface": {
+      "primary": "#FFFFFF",
+      "secondary": "#000000",
+      "tertiary": "#FF0040",
+      "border": "#000000"
+    },
+    "semantic": {
+      "error": "#FF0000",
+      "warning": "#FFB000",
+      "success": "#00FF41",
+      "info": "#0099FF"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": "Impact, Arial Black, Franklin Gothic Bold, sans-serif",
+      "secondary": "Helvetica, Arial, sans-serif",
+      "mono": "Courier New, monospace"
+    },
+    "fontSize": {
+      "xs": "12px",
+      "sm": "14px",
+      "base": "16px",
+      "lg": "20px",
+      "xl": "24px",
+      "2xl": "32px",
+      "3xl": "48px",
+      "4xl": "64px",
+      "5xl": "96px",
+      "6xl": "128px"
+    },
+    "fontWeight": {
+      "normal": 400,
+      "medium": 600,
+      "bold": 900,
+      "black": 900
+    },
+    "lineHeight": {
+      "tight": "0.9",
+      "normal": "1.1",
+      "relaxed": "1.3"
+    }
+  },
+  "spacing": {
+    "none": "0",
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px",
+    "3xl": "64px",
+    "4xl": "96px",
+    "5xl": "128px"
+  },
+  "borderRadius": {
+    "none": "0",
+    "sm": "2px",
+    "md": "4px",
+    "lg": "8px"
+  },
+  "shadows": {
+    "harsh": "8px 8px 0px #000000",
+    "brutal": "12px 12px 0px #000000",
+    "extreme": "16px 16px 0px #000000",
+    "inset": "inset 4px 4px 0px #000000"
+  },
+  "borders": {
+    "thin": "2px solid #000000",
+    "medium": "4px solid #000000",
+    "thick": "8px solid #000000",
+    "accent": "4px solid #FF0040"
+  },
+  "motion": {
+    "duration": {
+      "fast": "0.1s",
+      "normal": "0.2s",
+      "slow": "0.3s"
+    },
+    "easing": {
+      "linear": "linear",
+      "ease": "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+    }
+  }
+}

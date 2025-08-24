@@ -1,25 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Inter } from "next/font/google";
+import "./globals-neobrutalist.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 // Prevent Font Awesome from adding its CSS automatically since it's being imported above
 config.autoAddCss = false;
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Using Inter for secondary text, but primary will be Impact-based from CSS
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "600", "700", "900"]
 });
 
 export const metadata: Metadata = {
-  title: "GiveMeASong",
-  description: "Знайди свою улюблену пісню на всіх платформах, маючи лише одне посилання!",
+  title: "GiveMeASong - BRUTAL EDITION",
+  description: "Знайди свою улюблену пісню на всіх платформах - BRUTALLY FAST!",
   authors: [{ name: "GiveMeASong Team" }],
 };
 
@@ -27,7 +24,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#1a1a1a",
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -36,13 +33,34 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-purple-950 text-gray-100`}
-      >
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.02] pointer-events-none"></div>
-        <div className="fixed top-0 z-[-2] h-screen w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-        {children}
+    <html lang="uk">
+      <body className={`${inter.variable} antialiased min-h-screen`}>
+        {/* Harsh geometric background pattern */}
+        <div className="fixed inset-0 z-[-1]">
+          <div className="absolute inset-0 bg-white"></div>
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `
+                linear-gradient(0deg, #000 1px, transparent 1px),
+                linear-gradient(90deg, #000 1px, transparent 1px)
+              `,
+              backgroundSize: '50px 50px'
+            }}
+          ></div>
+          {/* Accent strips */}
+          <div className="absolute top-0 left-0 w-full h-2 bg-red-500" style={{ backgroundColor: '#FF0040' }}></div>
+          <div className="absolute bottom-0 left-0 w-full h-2 bg-red-500" style={{ backgroundColor: '#FF0040' }}></div>
+        </div>
+
+        {/* Main content area */}
+        <div className="relative z-10">
+          {children}
+        </div>
+
+        {/* Angular corner elements */}
+        <div className="fixed top-0 right-0 w-16 h-16 bg-black border-4 border-black transform rotate-45 translate-x-8 -translate-y-8 z-20"></div>
+        <div className="fixed bottom-0 left-0 w-12 h-12 bg-red-500 border-4 border-black transform rotate-45 -translate-x-6 translate-y-6 z-20" style={{ backgroundColor: '#FF0040' }}></div>
       </body>
     </html>
   );

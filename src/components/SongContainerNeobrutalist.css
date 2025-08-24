@@ -1,0 +1,555 @@
+@import '../../design-system/neobrutalist-tokens.css';
+
+/* Base layout styles */
+.neobrutalist-home-page,
+.neobrutalist-song-page {
+  min-height: 100vh;
+  padding: var(--space-lg);
+  position: relative;
+}
+
+.brutal-layout {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--space-2xl));
+}
+
+/* Angular accent elements */
+.brutal-accent-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--space-md);
+  background-color: var(--color-primary-accent);
+  border: var(--border-medium);
+  border-top: none;
+  box-shadow: 0 8px 0px var(--color-primary-black);
+  z-index: 1;
+}
+
+.brutal-corner-accent {
+  position: absolute;
+  top: var(--space-xl);
+  right: var(--space-xl);
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary-black);
+  border: var(--border-medium);
+  transform: rotate(45deg);
+  box-shadow: var(--shadow-harsh);
+  z-index: 5;
+}
+
+/* Main cards */
+.brutal-search-card,
+.brutal-main-card {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Header section with dramatic typography */
+.brutal-header-section {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  position: relative;
+}
+
+.brutal-logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.brutal-logo-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-primary-accent);
+  border: var(--border-thick);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary-white);
+  box-shadow: var(--shadow-brutal);
+  transform: rotate(-5deg);
+}
+
+.brutal-logo-text {
+  text-align: left;
+}
+
+.brutal-main-title {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-black);
+  font-size: var(--font-size-4xl);
+  color: var(--color-primary-black);
+  text-shadow: 4px 4px 0px var(--color-primary-accent);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.brutal-subtitle {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-top: var(--space-xs);
+}
+
+.brutal-tagline {
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-lg);
+  color: var(--color-primary-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: var(--line-height-normal);
+  border: var(--border-thin);
+  padding: var(--space-md);
+  background-color: var(--color-neutral-100);
+  box-shadow: var(--shadow-harsh);
+  transform: rotate(1deg);
+}
+
+/* Search form */
+.brutal-search-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+/* Footer section */
+.brutal-footer-section {
+  border-top: var(--border-medium);
+  padding-top: var(--space-lg);
+  text-align: center;
+}
+
+.brutal-api-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-black);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-sm) var(--space-md);
+  border: var(--border-thin);
+  background-color: var(--color-neutral-100);
+  transition: all var(--motion-duration-fast) var(--motion-easing-linear);
+}
+
+.brutal-api-link:hover {
+  background-color: var(--color-primary-accent);
+  color: var(--color-primary-white);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--color-primary-black);
+}
+
+/* Song page specific styles */
+.brutal-song-content {
+  margin-bottom: var(--space-2xl);
+}
+
+/* Asymmetric grid for song details */
+.brutal-song-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+  align-items: start;
+}
+
+.brutal-text-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.brutal-title-block,
+.brutal-artist-block {
+  position: relative;
+}
+
+.brutal-label {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--space-sm);
+  background-color: var(--color-primary-black);
+  color: var(--color-primary-white);
+  padding: var(--space-xs) var(--space-sm);
+  display: inline-block;
+  border: var(--border-thin);
+  box-shadow: 4px 4px 0px var(--color-primary-accent);
+}
+
+.brutal-song-title {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-black);
+  font-size: var(--font-size-5xl);
+  color: var(--color-primary-black);
+  text-shadow: 6px 6px 0px var(--color-primary-accent);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  word-break: break-word;
+  margin: 0;
+}
+
+.brutal-artist-name {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-black);
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary-accent);
+  text-shadow: 4px 4px 0px var(--color-primary-black);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  word-break: break-word;
+  margin: 0;
+}
+
+/* Cover image styling */
+.brutal-cover-column {
+  position: relative;
+}
+
+.brutal-image-container {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.brutal-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-extreme);
+  filter: contrast(1.2) saturate(0.8);
+}
+
+.brutal-image-border {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: 8px;
+  bottom: 8px;
+  border: var(--border-medium);
+  border-color: var(--color-primary-accent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Platform section */
+.brutal-platforms-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.brutal-section-label {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-black);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: var(--border-thick);
+  border-color: var(--color-primary-accent);
+}
+
+.brutal-platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+}
+
+.brutal-platform-item {
+  position: relative;
+}
+
+.brutal-platform-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  background-color: var(--color-surface-primary);
+  border: var(--border-medium);
+  box-shadow: var(--shadow-harsh);
+  text-decoration: none;
+  color: var(--color-primary-black);
+  transition: all var(--motion-duration-fast) var(--motion-easing-linear);
+  min-height: 120px;
+  gap: var(--space-md);
+}
+
+.brutal-platform-link:hover {
+  background-color: var(--platform-color, var(--color-primary-accent));
+  color: var(--color-primary-white);
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px var(--color-primary-black);
+}
+
+.brutal-platform-icon {
+  font-size: var(--font-size-3xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brutal-platform-label {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* No platforms state */
+.brutal-no-platforms {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  border: var(--border-medium);
+  background-color: var(--color-neutral-200);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-lg);
+}
+
+/* Loading states */
+.brutal-loading-state {
+  text-align: center;
+  padding: var(--space-3xl) 0;
+}
+
+.brutal-loading-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.brutal-spinner-large {
+  width: 80px;
+  height: 80px;
+  border: var(--border-thick);
+  border-top-color: var(--color-primary-accent);
+  border-right-color: var(--color-primary-accent);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  animation: brutal-spin 0.8s linear infinite;
+}
+
+.brutal-loading-title {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-black);
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary-black);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+}
+
+.brutal-loading-subtitle {
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Error states */
+.brutal-error-state {
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+
+.brutal-error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.brutal-error-icon {
+  font-size: var(--font-size-4xl);
+}
+
+.brutal-error-text {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Back button section */
+.brutal-back-section {
+  border-top: var(--border-medium);
+  padding-top: var(--space-lg);
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .brutal-song-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .brutal-cover-column {
+    order: -1;
+  }
+  
+  .brutal-image-container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .brutal-platforms-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .neobrutalist-home-page,
+  .neobrutalist-song-page {
+    padding: var(--space-md);
+  }
+  
+  .brutal-layout {
+    min-height: calc(100vh - var(--space-xl));
+  }
+  
+  .brutal-logo-section {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .brutal-logo-icon {
+    width: 60px;
+    height: 60px;
+    font-size: var(--font-size-2xl);
+  }
+  
+  .brutal-main-title {
+    font-size: var(--font-size-2xl);
+    text-align: center;
+  }
+  
+  .brutal-song-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .brutal-artist-name {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .brutal-tagline {
+    font-size: var(--font-size-base);
+    transform: none;
+  }
+  
+  .brutal-platforms-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .brutal-corner-accent {
+    width: 40px;
+    height: 40px;
+    top: var(--space-lg);
+    right: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .brutal-song-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .brutal-artist-name {
+    font-size: var(--font-size-xl);
+  }
+  
+  .brutal-main-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .brutal-platform-link {
+    min-height: 100px;
+    padding: var(--space-md);
+  }
+  
+  .brutal-platform-icon {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* Animation keyframes */
+@keyframes brutal-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .brutal-cover-image {
+    filter: contrast(1.5) saturate(1.2);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .brutal-spinner-large {
+    animation: none;
+  }
+  
+  .brutal-platform-link:hover {
+    transform: none;
+  }
+  
+  .brutal-api-link:hover {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .brutal-corner-accent,
+  .brutal-accent-stripe {
+    display: none;
+  }
+  
+  .brutal-cover-image {
+    filter: none;
+  }
+}
